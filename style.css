@@ -1,0 +1,262 @@
+/*Styles*/
+@import url('https://fonts.googleapis.com/css?family=CircularStd: 400,600');
+/* css variables */
+:root {
+    --primary: rgba(20,68,153, 1);
+    --dark: #627081;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(180, 180, 180, 0.5);
+    --font: 'CircularStd', verdana, tahoma, sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: var(--font);
+    color: var(--dark);
+}
+
+body {
+    background: var(--light);
+    line-height: 1.4em;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: .9em;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;   
+}
+
+.container {
+    width: 100%;
+}
+
+/*header*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: var(--shadow); 
+}
+
+.header img {
+    font-size: 1.6em;
+    margin-top: 1em;
+}
+
+/*navigation*/
+.header .navbar .nav-items {
+	width: 100%;
+    display: flex;
+}
+
+.header .navbar .nav-items li {
+    padding: 0 1em;
+}
+
+.header .nav-items li a {
+    display: block;
+    padding: 1em;
+    color: var(--primary);
+    font-weight: medium;
+    background-color: inherit;
+    cursor: pointer;
+}
+.header .nav-items li a:hover {
+    background: var(--primary);
+    color: var(--light);
+    transition: 0.5s;
+
+}
+
+.header .nav-items li:nth-child(6) a {
+    border: var(--primary) 1px solid;
+    border-radius: 10px; 
+}
+
+
+.header .nav-items li:nth-child(6) a:hover {
+    background: var(--primary);
+    color: var(--light);
+}
+
+/*main-content*/
+.main-content {
+    width: 60%;
+    margin: 2em auto 5em;
+    text-align: center;
+}
+
+/*Scroll*/
+.main-content .scroll {
+    background: var(--light);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 200px;
+    justify-items: center;
+    padding-left: 10em;
+
+}
+
+.main-content .scroll div {
+    width: 100%;  
+    position: relative;
+    background: #eee;
+}
+
+.main-content .scroll .round {
+    height: 30%;
+    width: 6%;
+    border: 1px solid var(--light);
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.main-content .scroll .rect {
+    width: 30%;
+    height: 6%;
+    padding: .2em;
+}
+
+.main-content .scroll .left-scroll {
+    background: var(--primary);
+}
+
+.main-content .scroll .left-scroll .btn {
+    border: var(--light);
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    border-radius: 100%;
+    background: var(--light);
+    top: 1em;
+    right: .9em;
+
+}
+
+.scroll-content {
+    display: flex;
+    justify-content: space-around;
+    margin-left: -8em;
+    margin-top: -3em;
+    background: none !important;
+}
+
+.scroll-content p {
+    background: none;
+    color: var(--dark);
+}
+
+/*form*/
+.form-content {
+    margin-top: 5em;
+}
+
+.form-content h1 {
+    color: var(--primary);
+}
+
+.form {
+    border: var(--primary) dashed 1px;
+    height: 100%;
+    border-radius: 10px;
+    width: 60%;
+    margin: 1em auto;
+    padding: 0 .2em;
+}
+
+.form-group {
+    padding: 1em 0;
+    text-align: left;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.form-group label, input, select, button {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.form-group input, select, button {
+    padding: 1.2em 0;
+    border-radius: 6px;
+    box-shadow:  1px 0 5px rgba(61, 59, 59, 0.5);
+}
+
+.form-group select, button {
+    font-size: .9em;
+}
+
+.form-group button {
+    background: var(--primary);
+    color: white;
+}
+
+.footer {
+    width: 90%;
+    margin-top: 5em auto 0;
+    display: flex;
+    justify-content:space-between;
+}
+
+.footer div {
+    margin-left: 2em; 
+}
+
+.footer .left {
+    font-size: .7em;
+}
+
+.footer li {
+    font-size: .9em;
+}
+
+.footer h3 {
+    font-weight: normal;
+}
+
+.footer h3 ul {
+    width: 100%;
+}
+
+.footer sup {
+    font-size: .7em;
+}
+
+.footer a {
+    color: var(--dark);
+}
+
+.footer .center, .right h3 {
+    padding-left: 2em;
+}
+
+.footer .right ul li:nth-child(5) ul {
+    display: flex;
+}
+
+.footer .right ~ ul li {
+    float: left;
+}
+
+@media only screen and (max-width: 1070px) {
+    .header {
+        width: 80%;
+    }
+    
+}
+
+@media only screen and (max-width: 975px) {
+    header{
+        width: 100%;
+    }
+}
